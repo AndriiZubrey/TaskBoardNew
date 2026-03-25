@@ -124,10 +124,10 @@ public sealed class InMemoryTaskService : ITaskService
         }
 
         var today = DateOnly.FromDateTime(DateTime.UtcNow);
-        if (request.DueDate < today)
-        {
-            throw new ArgumentException("Due date cannot be in the past.");
-        }
+        //if (request.DueDate < today)
+        //{
+        //    throw new ArgumentException("Due date cannot be in the past.");
+        //}
     }
 
     private void Seed()
