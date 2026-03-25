@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TaskBoard</title>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+    <main class="container">
+        <header class="hero">
+            <h1>TaskBoard</h1>
+        </header>
+
+        <section class="grid">
+            <article class="card">
+                <h2>Додати задачу</h2>
+                <form id="taskForm">
+                    <label>
+                        Назва
+                        <input name="title" minlength="3" maxlength="80" required />
+                    </label>
+
+                    <label>
+                        Опис
+                        <textarea name="description" maxlength="500" rows="3"></textarea>
+                    </label>
+
+                    <label>
+                        Дедлайн
+                        <input name="dueDate" type="date" required />
+                    </label>
+
+                    <label>
+                        Пріоритет
+                        <select name="priority">
+                            <option value="1">1 — низький</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3 — середній</option>
+                            <option value="4">4</option>
+                            <option value="5">5 — високий</option>
+                        </select>
+                    </label>
+
+                    <button type="submit">Створити</button>
+                    <p id="formError" class="error"></p>
+                </form>
+            </article>
+
+            <article class="card">
+                <h2>Підсумок</h2>
+                <div id="summary" class="summary"></div>
+            </article>
+        </section>
+
+        <section class="card">
+            <h2>Список задач</h2>
+            <div id="tasks"></div>
+        </section>
+    </main>
+
+    <script src="/app.js"></script>
+</body>
+</html>
