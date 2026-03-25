@@ -14,7 +14,6 @@ public class InMemoryTaskServiceTests
             "Prepare project notes",
             DateOnly.FromDateTime(DateTime.UtcNow.AddDays(2)),
             4));
-
         Assert.True(created.Id > 0);
         Assert.Equal("Write docs", created.Title);
         Assert.False(created.IsCompleted);
